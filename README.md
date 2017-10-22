@@ -7,6 +7,12 @@ Visit "My apps" console and set
 - Name: as you like
 - Redirect uris: `http://127.0.0.1:5000/callback`
 
+Set scopes (whitelists) in "Authorization scopes" panel.
+
+- [x] report:eye-color
+- [x] report:beard-thickness
+- [x] report:morning-person
+
 ### Run your app
 
 ```
