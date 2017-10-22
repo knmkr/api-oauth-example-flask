@@ -1,5 +1,7 @@
 ## `flask`
 
+## How to run
+
 ### Register your app
 
 Visit "My apps" console and set
@@ -24,3 +26,7 @@ $ python app.py
 ```
 
 then, visit `http://127.0.0.1:5000`
+
+## How it works
+
+See https://github.com/AWAKENS-dev/api-oauth-example-flask/issues/1
