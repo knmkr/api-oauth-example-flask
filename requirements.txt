@@ -1,2 +1,2 @@
 flask
-genomelink
+genomelink>=0.1.5

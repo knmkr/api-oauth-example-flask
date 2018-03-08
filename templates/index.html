@@ -9,6 +9,17 @@
         <p class="lead">GENOME LINK example</p>
       </div>
 
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
       {% if not reports %}
       <a href="{{ authorize_url }}" class="btn btn-default">Connect with genome</a>
       {% else %}

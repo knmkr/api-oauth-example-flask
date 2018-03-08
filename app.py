@@ -1,5 +1,5 @@
 import genomelink
-from flask import Flask, render_template, request, redirect, session, url_for
+from flask import Flask, flash, render_template, request, redirect, session, url_for
 app = Flask(__name__)
 
 
@@ -20,7 +20,11 @@ def callback():
     # The user has been redirected back from the provider to your registered
     # callback URL. With this redirection comes an authorization code included
     # in the request URL. We will use that to obtain an access token.
-    token = genomelink.OAuth.token(request_url=request.url)
+    try:
+        token = genomelink.OAuth.token(request_url=request.url)
+    except genomelink.errors.GenomeLinkError as e:
+        flash('Authorization failed.')
+        return redirect(url_for('index'))
 
     # At this point you can fetch protected resources but lets save
     # the token and show how this is done from a persisted token in index page.
