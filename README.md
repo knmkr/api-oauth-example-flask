@@ -1,6 +1,6 @@
 # OAuth Example - Python Flask web app
 
-[![CircleCI](https://circleci.com/gh/knmkr/api-oauth-example-flask.svg?style=svg)](https://circleci.com/gh/knmkr/api-oauth-example-flask)
+[![CircleCI](https://circleci.com/gh/AWAKENS-dev/api-oauth-example-flask.svg?style=svg)](https://circleci.com/gh/AWAKENS-dev/api-oauth-example-flask)
 
 ## Requirements
 
