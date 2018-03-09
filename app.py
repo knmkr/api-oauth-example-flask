@@ -26,6 +26,8 @@ def create_app():
             token = genomelink.OAuth.token(request_url=request.url)
         except genomelink.errors.GenomeLinkError as e:
             flash('Authorization failed.')
+            if os.environ.get('DEBUG') == '1':
+                flash('[DEBUG] ({}) {}'.format(e.error, e.description))
             return redirect(url_for('index'))
 
         # At this point you can fetch protected resources but lets save
@@ -38,7 +40,7 @@ def create_app():
 if __name__ == '__main__':
     # This allows us to use a plain HTTP callback.
     import os
-    os.environ['DEBUG'] = "1"
+    os.environ['DEBUG'] = '1'
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
     # Run local server on port 5000.
