@@ -1,5 +1,4 @@
 import os
-import unittest
 try:
     from urllib.request import urlopen
 except ImportError:
