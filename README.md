@@ -20,7 +20,7 @@ $ pip install -r requirements.txt
 
 ### Register your app
 
-Visit "My apps" console and set
+Visit ["My apps"](https://genomelink.io/developers/apps/) console and set
 
 - Name: as you like
 - Redirect uris: `http://127.0.0.1:5000/callback`
