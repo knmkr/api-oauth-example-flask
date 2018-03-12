@@ -13,7 +13,7 @@ class BrowserTestCase(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super(BrowserTestCase, cls).setUpClass()
-        cls.browser = Browser('chrome')
+        cls.browser = Browser('chrome', headless=True)
         os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
     @classmethod
